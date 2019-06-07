@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        CRUD JS
+    </title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+   <h1>Information Form</h1>
+    <table>
+        <tr>
+            <td class='half'>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div>
+                        <label>Campaign name*:</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                        <input type="text" name="fullName" id="fullName" placeholder="Expl: Apple">
+                    </div>
+                    <div>
+                        <label>Keywords:</label>
+                        <input type="text" name="keywords" id="keywords"placeholder="Expl: iPhone">
+                    </div>
+                    <div>
+                        <label>Bid amount*:</label>
+                        <input type="text" name="big_amount" id="big_amount" placeholder="Type amount">
+                    </div>
+                    <div>
+                        <label>Campaign fund:</label>
+                        <input type="text" name="campaign" id="campaign" placeholder="Type fund">
+                    </div>
+                    <div  class='checkboxes'>
+                        <label>Status*:</label>
+                        <div>
+                            <input type="radio" name="status"  value="on"><label>ON</label>
+                            <input type="radio" name="status" value="off"><label>OFF</label>
+                        </div>
+                    </div>
+                    <div>
+                        <label>Town*:</label>
+                        <select id='town'>
+                           <option disabled selected id='disabled'>-Firm location-</option>
+                            <option>Warsaw</option>
+                            <option>Gdansk</option>
+                            <option>Berlin</option>
+                            <option>Minsk</option>
+                            <option>Brussel</option>
+                            <option>Nice</option>
+                            <option>Paris</option>
+                            <option>Madrid</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Radius</label>
+                        <input name="radius" id="radius" type="text" placeholder="Type your company radius" >
+                    </div>
+                    <div class='required'>* - field is required</div>
+                    <div class="form-action-buttons">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </td>
+    </table>
+    <table>
+        <tr>
+            <td class='second-half'>
+                <table class="list" id="employeeList">
+                    <thead>
+                        <tr>
+                            <th>Full Name</th>
+                            <th>EMP Code</th>
+                            <th>Big-amount</th>
+                            <th>Campaign</th>
+                            <th>Status</th>
+                            <th>Town</th>
+                            <th>Radius</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <script src="script.js"></script>
+</body>
+
+</html>
